@@ -1,0 +1,43 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  msTimer blinkTimer;
+  message car2_brake_data_message car2_brake;
+  char flag = 0;
+
+}
+On start
+{
+  setTimer(blinkTimer,5000);
+  
+}
+on timer blinkTimer
+{
+  
+    if(flag==0)
+  {
+    car2_brake.car2_brake_data_signal=1;
+    
+    output(car2_brake);
+     write("Car brake happen");
+    flag=1;
+  }
+  else if(flag==1)
+  {
+    car2_brake.car2_brake_data_signal=0;
+    output(car2_brake);
+    write("Car brake not happen");
+    flag=0;
+  }
+  setTimer(blinkTimer,5000);
+}
+
+
+
+
+

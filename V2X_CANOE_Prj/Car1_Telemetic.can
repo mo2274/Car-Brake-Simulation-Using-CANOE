@@ -1,0 +1,63 @@
+/*@!Encoding:1256*/
+includes
+{
+  
+}
+    
+variables
+{
+  msTimer blinkTimer;
+  message Car1_Telematic_V2X_Data V2X_DATA;
+  message Car1_V2X_Intenal_DATA_Message internal_data ;
+  char brake_flag=0;
+  char flag1 ;
+}
+on start
+{
+  setTimer(blinkTimer,250);
+  
+}
+
+on timer blinkTimer
+{
+  output(V2X_DATA);
+ setTimer(blinkTimer,250);
+  
+   
+}
+On message Car1_Brake_DATA
+{
+  if(this.Car1_brake_frame_1==1)
+  {
+    brake_flag=1;
+    V2X_DATA.Car1_V2X_DATA=brake_flag;
+    output(V2X_DATA);
+  }
+  else if (this.Car1_brake_frame_1==0)
+   {
+    brake_flag=0;
+    V2X_DATA.Car1_V2X_DATA=brake_flag;
+    output(V2X_DATA);
+   }
+  
+}
+
+On message Car2_Telematic_V2X_Data
+{
+   if(this.Car2_V2X_DATA ==1)
+  {
+    flag1 = 1;
+   internal_data.Car1_V2X_Intenal_DATA = flag1;
+    output(internal_data);
+  }
+  else if(this.Car2_V2X_DATA ==0)
+   {
+    flag1 = 0;
+    internal_data.Car1_V2X_Intenal_DATA = flag1;
+    output(internal_data);
+   }
+  
+  
+  
+}
+

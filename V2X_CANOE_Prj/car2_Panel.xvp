@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="car2_Panel">
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl3" Children="Controls" ControlName="Static Text 3">
+      <Property Name="Name">StaticTextControl3</Property>
+      <Property Name="Size">72, 13</Property>
+      <Property Name="Location">108, 397</Property>
+      <Property Name="BackColor">Black</Property>
+      <Property Name="Font">Tahoma, 8.25pt, style=Bold, Italic</Property>
+      <Property Name="Text">car2_brake</Property>
+      <Property Name="ForeColor">ActiveBorder</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl2" Children="Controls" ControlName="Static Text 2">
+      <Property Name="Name">StaticTextControl2</Property>
+      <Property Name="Size">115, 13</Property>
+      <Property Name="Location">352, 397</Property>
+      <Property Name="BackColor">Black</Property>
+      <Property Name="Font">Tahoma, 8.25pt, style=Bold, Italic</Property>
+      <Property Name="Text">car2_brake_status</Property>
+      <Property Name="ForeColor">ActiveBorder</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.StaticTextControl, Vector.CANalyzer.Panels.CommonControls, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null" Name="StaticTextControl1" Children="Controls" ControlName="Static Text">
+      <Property Name="Name">StaticTextControl1</Property>
+      <Property Name="Size">121, 13</Property>
+      <Property Name="Location">375, 43</Property>
+      <Property Name="BackColor">Black</Property>
+      <Property Name="Font">Tahoma, 8.25pt, style=Bold, Italic</Property>
+      <Property Name="Text">car1_brake_happen</Property>
+      <Property Name="ForeColor">ActiveCaption</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl1" Children="Controls" ControlName="Button">
+      <Property Name="Name">ButtonControl1</Property>
+      <Property Name="Size">88, 26</Property>
+      <Property Name="Location">227, 397</Property>
+      <Property Name="Font">Tahoma, 9.75pt, style=Bold</Property>
+      <Property Name="Text">Button</Property>
+      <Property Name="SymbolConfiguration">5;1;easy;;;car2_brake_button;1;;;-1;;;</Property>
+      <Property Name="TabIndex">2</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl2" ControlName="LED Control 2">
+      <Property Name="Name">LEDControl2</Property>
+      <Property Name="Size">24, 24</Property>
+      <Property Name="Location">492, 397</Property>
+      <Property Name="UsedLEDColorOff">Green</Property>
+      <Property Name="SymbolConfiguration">5;1;easy;;;car2_brake_status;1;;;-1;;;</Property>
+      <Property Name="TabIndex">1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.LEDControl, Vector.CANalyzer.Panels.CommonControls, Version=11.0.55.0, Culture=neutral, PublicKeyToken=null" Name="LEDControl1" ControlName="LED Control">
+      <Property Name="Name">LEDControl1</Property>
+      <Property Name="Size">58, 58</Property>
+      <Property Name="Location">525, 34</Property>
+      <Property Name="UsedLEDColorOff">Green</Property>
+      <Property Name="LEDStyle">TriangleUp</Property>
+      <Property Name="SymbolConfiguration">5;1;easy;;;car1_brake_happen;1;;;-1;;;</Property>
+      <Property Name="TabIndex">0</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">701, 467</Property>
+    <Property Name="BackColor">DarkKhaki</Property>
+    <Property Name="BorderStyle">Fixed3D</Property>
+    <Property Name="ImageFileName">C:\Users\scc\Desktop\Dashboard-Car.jpg</Property>
+    <Property Name="IsProportional">True</Property>
+  </Object>
+</Panel>

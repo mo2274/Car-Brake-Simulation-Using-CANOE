@@ -1,0 +1,40 @@
+/*@!Encoding:1256*/
+includes
+{
+  
+}
+    
+variables
+{
+  msTimer blinkTimer;
+  message car2_telemetic_data_message V2X_DATA;
+  char brake_flag=0;
+}
+on start
+{
+  setTimer(blinkTimer,850);
+  
+}
+
+on timer blinkTimer
+{
+  V2X_DATA.car2_telemetic_data_signal=brake_flag;
+  output(V2X_DATA);
+    setTimer(blinkTimer,750);
+}
+On message car2_brake_data_message
+{
+  if(this.car2_brake_data_signal==1)
+  {
+    brake_flag=1;
+    write("Brake happen");
+    
+    
+  }
+  else if (this.car2_brake_data_signal==0)
+   {
+    brake_flag=0;
+    write("Brake not happen");
+   }
+  
+}

@@ -1,0 +1,46 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  msTimer blinkTimer;
+  message Car1_Brake_DATA car1_brake;
+ 
+}
+On start
+{
+  setTimer(blinkTimer,4000);
+  
+}
+ on timer blinkTimer
+{
+  
+     output(car1_brake);
+  setTimer(blinkTimer,300);
+  
+}
+
+
+on envVar car1_brake_button
+{
+
+   car1_brake.Car1_brake_frame_1 = getValue(car1_brake_button) ;
+  output(car1_brake)  ;
+
+}
+
+On message Car1_Brake_DATA
+{
+  putValue(car1_brake_status,this.Car1_brake_frame_1);
+
+}
+
+on message Car1_V2X_Intenal_DATA_Message 
+{
+  putValue(car2_brake_happen ,this.Car1_V2X_Intenal_DATA) ;
+  
+}
+
